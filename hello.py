@@ -11,4 +11,4 @@ dict(psutil.virtual_memory()._asdict())
 psutil.virtual_memory().percent
 #79.2
 # you can calculate percentage of available memory
-psutil.virtual_memory().available * 100 / psutil.virtual_memory().total
+print('available memory', psutil.virtual_memory().available * 100 / psutil.virtual_memory().total)
