@@ -1,7 +1,7 @@
 
 import psutil
 count = 0
-while (count < 100):
+while (count < 20):
   count=count+1  
   # gives a single float value
   print('The CPU usage is: ', psutil.cpu_percent(1))
