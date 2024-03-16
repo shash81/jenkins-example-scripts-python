@@ -1,7 +1,7 @@
 
 import psutil
 # gives a single float value
-print('Hello World')
+
 psutil.cpu_percent()
 # gives an object with many fields
 psutil.virtual_memory()
