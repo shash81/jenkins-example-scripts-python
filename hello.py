@@ -1,7 +1,8 @@
 
 import psutil
 # gives a single float value
-psutil.cpu_percent()
+print('The CPU usage is: ', psutil.cpu_percent(4))
+
 # gives an object with many fields
 psutil.virtual_memory()
 # you can convert that object to a dictionary 
