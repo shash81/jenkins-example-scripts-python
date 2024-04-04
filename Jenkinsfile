@@ -12,10 +12,10 @@ pipeline {
         }
     }
 
-  //  post {
-  //      success {
+    post {
+       success {
             // Archive the generated chart
-          //  archiveArtifacts artifacts: 'sample_chart.png'
-       // }
-   // }
+           archiveArtifacts artifacts: 'sample_chart.png'
+        }
+   }
 }
