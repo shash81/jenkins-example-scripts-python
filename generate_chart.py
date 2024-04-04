@@ -15,4 +15,4 @@ plt.grid(True)
 plt.savefig('sample_chart.png')
 
 # Show the chart
-plt.show()
+//plt.show()
