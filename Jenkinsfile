@@ -1,24 +1,21 @@
 pipeline {
-  agent any
-  stages {
-    stage('version') {
-      steps {
-        bat 'python --version'
-      }
+    agent any
+
+    stages {
+        stage('Generate Chart') {
+            steps {
+                // Execute the Python script
+                script {
+                    bat 'python generate_chart.py'
+                }
+            }
+        }
     }
-    stage('parallel test'){
-      parallel{
-    stage('delay'){  
-      steps{
-        bat 'timeout /t 20 /nobreak'
-      }
+
+    post {
+        success {
+            // Archive the generated chart
+            archiveArtifacts artifacts: 'sample_chart.png'
+        }
     }
-    stage('hello') {
-      steps {
-        bat 'python hello.py'
-      }
-    }
-      }
-  }
-  }
 }
