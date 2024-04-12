@@ -20,9 +20,11 @@ import psutil
 
 x=[0]
 y= [0]
-count = 0
+z=[1]
+count = 1
 while (count < 20):
-  count=count+1  
+  count=count+1 
+  z.append(count)
   # gives a single float value
   x.append(psutil.cpu_percent(1))
  # print('The CPU usage is: ', psutil.cpu_percent(1))
@@ -38,10 +40,12 @@ while (count < 20):
   # you can calculate percentage of available memory
  # print('available memory', psutil.virtual_memory().available * 100 / psutil.virtual_memory().total)
 
-plt.plot(x, y)
+plt.plot(z, x)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Sample Chart')
 plt.grid(True)
-plt.savefig('sample_chart.png')
+plt.savefig('cpu_chart.png')
+plt(z,y)
+plt.savefig('memory_chart.png')
 
