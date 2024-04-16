@@ -41,11 +41,11 @@ while (count < 20):
  # print('available memory', psutil.virtual_memory().available * 100 / psutil.virtual_memory().total)
 
 fig, axs = plt.subplots(2)
-axs[0].plot(x, y, 'r-')
+axs[0].plot(z, x, 'r-')
 axs[0].set_title('Memory behavior')
 
 # Plotting on the second subplot
-axs[1].plot(x, z, 'g-')
+axs[1].plot(z, y, 'g-')
 axs[1].set_title('CPU Behavior')
 plt.savefig('CPUandMemory.png')
 
