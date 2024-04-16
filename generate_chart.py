@@ -22,7 +22,7 @@ x=[0]
 y= [0]
 z=[1]
 count = 1
-while (count < 100):
+while (count < 10):
   count=count+1 
   z.append(count)
   # gives a single float value
@@ -42,10 +42,13 @@ while (count < 100):
 
 fig, axs = plt.subplots(2,figsize=(15, 10))
 axs[0].plot(z, x, 'r-')
+axs[0].grid(True)
+
 axs[0].set_title('Memory behavior')
 
 # Plotting on the second subplot
 axs[1].plot(z, y, 'g-')
+axs[1].grid(True)
 axs[1].set_title('CPU Behavior')
 plt.savefig('CPUandMemory.png')
 
