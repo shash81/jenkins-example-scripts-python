@@ -40,7 +40,7 @@ while (count < 20):
   # you can calculate percentage of available memory
  # print('available memory', psutil.virtual_memory().available * 100 / psutil.virtual_memory().total)
 
-fig, axs = plt.subplots(2)
+fig, axs = plt.subplots(2,figsize=(15, 10))
 axs[0].plot(z, x, 'r-')
 axs[0].set_title('Memory behavior')
 
