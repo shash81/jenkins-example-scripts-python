@@ -15,8 +15,8 @@ pipeline {
     post {
        success {
             // Archive the generated chart
-           archiveArtifacts artifacts: 'cpu_chart.png'
-           archiveArtifacts artifacts: 'memory_chart.png'
+           archiveArtifacts artifacts: 'CPUandMemory.png'
+           
         }
    }
 }
