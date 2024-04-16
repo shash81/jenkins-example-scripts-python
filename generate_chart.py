@@ -40,17 +40,13 @@ while (count < 20):
   # you can calculate percentage of available memory
  # print('available memory', psutil.virtual_memory().available * 100 / psutil.virtual_memory().total)
 
-plt.plot(z, x)
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Sample Chart')
-plt.grid(True)
-plt.savefig('cpu_chart.png')
-plt.plot(z, y)
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Sample Chart')
-plt.grid(True)
-plt(z,y)
-plt.savefig('memory_chart.png')
+fig, axs = plt.subplots(2)
+axs[0].plot(x, y, 'r-')
+axs[0].set_title('Memory behavior')
+
+# Plotting on the second subplot
+axs[1].plot(x, z, 'g-')
+axs[1].set_title('CPU Behavior')
+plt.savefig('CPUandMemory.png')
+
 
