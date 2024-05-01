@@ -2,6 +2,8 @@ pipeline {
     agent any
 
     stages {
+        stage('running pipeline'){
+        parallel{
         stage('Generate Chart') {
             steps {
                 // Execute the Python script
@@ -10,6 +12,16 @@ pipeline {
                 }
             }
         }
+        stage ('real Pipeline')
+            {
+                steps{
+
+                    bat 'echo 'hello world' '
+                }
+            
+            }    
+    }
+    }
     }
 
     post {
