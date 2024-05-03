@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage ('test stage'){
-            steps{
+            steps {
                 bat 'echo start step'
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             {
                 steps {
 
-                    bat 'echo 'hello world' '
+                    bat 'echo 'hello world'
                 }
             
             }    
