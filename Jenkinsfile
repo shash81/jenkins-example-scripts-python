@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('running pipeline'){
-            parallel {           
+             parallel {           
        
         stage('Generate Chart') {
             steps {
