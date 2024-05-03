@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage ('test stage'){
+            steps{
+                bat 'echo start step'
+            }
+        }
         stage('running pipeline'){
             parallel {           
        
