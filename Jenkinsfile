@@ -2,13 +2,8 @@ pipeline {
     agent none
 
     stages {
-        stage ('test stage'){
-            steps {
-                bat 'echo start step'
-            }
-        }
-        stage('running pipeline'){
-             parallel {           
+      
+               
        
         stage('Generate Chart') {
             steps {
@@ -17,19 +12,10 @@ pipeline {
                     bat 'python generate_chart.py'
                 }
             
-        }
-        stage ('real Pipeline')
-            {
-                steps {
-
-                    bat 'echo 'hello world'
-                }
-            
-            }    
+        }            
          }
     
-    }
-    }
+   
 
     post {
        success {
