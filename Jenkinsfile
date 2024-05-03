@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+    agent none
 
-    stages() {
+    stages {
         stage ('test stage'){
             steps{
                 bat 'echo start step'
