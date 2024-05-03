@@ -3,8 +3,8 @@ pipeline {
 
     stages {
         stage('running pipeline'){
-            script {
-        parallel(
+            parallel {           
+       
         stage('Generate Chart') {
             steps {
                 // Execute the Python script
@@ -21,8 +21,8 @@ pipeline {
                 }
             
             }    
-    )
-    }
+         }
+    
     }
     }
 
