@@ -3,24 +3,26 @@ pipeline {
 
     stages {
         stage('running pipeline'){
+            script {
         parallel(
         stage('Generate Chart') {
             steps {
                 // Execute the Python script
-                script {
+                
                     bat 'python generate_chart.py'
                 }
-            }
+            
         }
         stage ('real Pipeline')
             {
-                steps{
+                steps {
 
                     bat 'echo 'hello world' '
                 }
             
             }    
     )
+    }
     }
     }
 
