@@ -22,7 +22,7 @@ x=[0]
 y= [0]
 z=[1]
 count = 1
-while (count < 10):
+while (count < 25):
   count=count+1 
   z.append(count)
   # gives a single float value
